@@ -1,6 +1,6 @@
 # COP4533 Programming Assignment 2
-Thurstan Ngo - 86963382  
-Syed Rahman - 95234900
+Thurstan Ngo - 
+Syed Rahman - 
 
 ## Running the Program
 
