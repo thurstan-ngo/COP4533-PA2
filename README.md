@@ -1,0 +1,18 @@
+# COP4533 Programming Assignment 2
+Thurstan Ngo - 86963382  
+Syed Rahman - 95234900
+
+## Running the Program
+
+
+## Assumptions
+
+
+## Question 1: Empirical Comparison
+
+
+## Question 2: Bad Sequence for LRU or FIFO
+
+
+## Question 3: Prove OPTFF is Optimal
+
