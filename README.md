@@ -1,5 +1,5 @@
 # COP4533 Programming Assignment 2
-Thurstan Ngo - 
+Thurstan Ngo -   
 Syed Rahman - 
 
 ## Running the Program
