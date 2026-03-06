@@ -1,6 +1,13 @@
 import sys
 
 def fifo(k, requests):
+    '''
+    First In, First Out
+
+    Comments
+    --------
+    First item is the item that has been in the cache for the longest
+    '''
     cache = []
     miss_count = 0
     for r in requests:
@@ -15,6 +22,15 @@ def fifo(k, requests):
 
 
 def lru(k, requests):
+    '''
+    Least Recently Used
+
+    Comments
+    --------
+    First item is the item whose most recent access time is the longest
+    If there is a hit, remove the item and append to the end of the cache list
+    Last item is the item whose most recent access time is the shortest
+    '''
     cache = []
     miss_count = 0
     for r in requests:
@@ -32,6 +48,14 @@ def lru(k, requests):
 
 
 def optff(k, m, requests):
+    '''
+    Belady’s Farthest-in-Future, optimal offline
+
+    Comments
+    --------
+    Iterate through items in the cache, evict first item NOT found in request list OR evict item with the largest index in the request list
+    When looking for index in the request list, only record the index of the first request for the item
+    '''
     cache = []
     miss_count = 0
     for i in range(m):
