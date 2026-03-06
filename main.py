@@ -31,6 +31,32 @@ def lru(k, requests):
     return miss_count
 
 
+def optff(k, m, requests):
+    cache = []
+    miss_count = 0
+    for i in range(m):
+        if requests[i] not in cache:
+            miss_count += 1
+            if len(cache) < k:
+                cache.append(requests[i])
+            else:
+                max_index = 0
+                remove_index = -1
+                remaining_requests = requests[i:]
+                for cache_index in range(k):
+                    item = cache[cache_index]
+                    if item not in remaining_requests:
+                        remove_index = cache_index
+                        break
+                    else:
+                        if remaining_requests.index(item) > max_index:
+                            max_index = remaining_requests.index(item)
+                            remove_index = cache_index
+                cache.pop(remove_index)
+                cache.append(requests[i])
+    return miss_count
+
+
 def main():
     input_file = sys.argv[1]
 
@@ -48,7 +74,8 @@ def main():
     # Run cache eviction policies on requests list
     print(f'FIFO  : {fifo(k, requests)}')
     print(f'LRU   : {lru(k, requests)}')
-
+    print(f'OPTFF : {optff(k, m, requests)}')
+    
 
 if __name__ == '__main__':
     main()

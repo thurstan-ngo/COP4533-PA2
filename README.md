@@ -4,7 +4,7 @@ Syed Rahman -
 
 ## Running the Program
 Type `python3 main.py input_file` into the terminal to run the program
-* Replace `input_file` with one of the three input files: `f1`, `f2`, `f3`
+* Replace `input_file` with one of the three input files: `File1`, `File2`, `File3`
 
 ## Assumptions
 * The name of input file is provided as command line argument when running main.py
