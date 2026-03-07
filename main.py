@@ -96,7 +96,6 @@ def main():
         requests = [int(r) for r in str_requests]
 
     # Run cache eviction policies on requests list
-    print(f"k = {k}, m = {m}")
     print(f'FIFO  : {fifo(k, requests)}')
     print(f'LRU   : {lru(k, requests)}')
     print(f'OPTFF : {optff(k, m, requests)}')
