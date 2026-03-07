@@ -10,6 +10,8 @@ Type `python3 main.py input_file.txt` into the terminal to run the program (pyth
 * The name of input file is provided as command line argument when running main.py
 * The input files are txt files
 ## Question 1: Empirical Comparison
+![Table of cache misses](cachetable.png)
+
 * In all three of our cases OPTFF had the lowest number of misses. This is expectice since this way of caching uses future knowledge of request sequence to evict the data that will be used furthest into the future.
 
 * FIFO and LRU both performed worse that OPTFF in all of our files. However, neither policy was doing better than the other consistently. In one instance they were equivalent, in another LRU was better, and in another FIFO was better.
